@@ -3,7 +3,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +14,7 @@ public class Main {
 		Connection con = null;
 		String url = "jdbc:mysql://localhost:3306/claseprogav";
 		String sql = "Select * From persona where dni = ?";
-		List<Persona> personas = new ArrayList();
+		List<Persona> personas = new ArrayList<Persona>();
 		
 		try {
 			
