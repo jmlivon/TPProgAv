@@ -21,14 +21,14 @@ public class Main {
 		*/
 		
 		/* Guardar
-		Persona p = new Persona("Pablo");
+		Persona p = new Persona("Roman");
 		try {
 			Consultas.Guardar(p);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		*/
+		}*/
+		
 		
 		/* Modificar
 		Persona p = new Persona("Omar");	
@@ -36,10 +36,16 @@ public class Main {
 		Consultas.Modificar(p);		
 		*/
 		
-		// Eliminar
+		/* Eliminar
 		Persona b = new Persona();
-		b.setDni(38491335);
-		Consultas.Eliminar(b);		
+		b.setDni(38491341);
+		Consultas.Eliminar(b);
+		*/
+		
+		/*Persona per = new Persona();
+		Object i = 38491337;
+		
+		Object o = Consultas.ObtenerPorDni(per.getClass(), i);*/
 	}
 
 	/*public static void main(String[] args) {

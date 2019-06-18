@@ -57,13 +57,9 @@ public class Consultas {
 			{
 				Object valor = UBean.goGet(o,f.getName());
 				if(valor.getClass().equals(String.class))
-				{
 					sb.append("'").append(valor.toString()).append("'").append(",");
-				}
 				else
-				{
 					sb.append(valor).append(",");
-				}
 			}
 		}	
 		
@@ -76,10 +72,9 @@ public class Consultas {
 			ps = conn.prepareStatement(sb.toString());
 			ps.execute();
 			
-			PreparedStatement ps2 = conn.prepareStatement("SELECT "
-			+ dniObtenido.getName() + " FROM " + tabla.nombre() + " ORDER BY "
-					+ "" + dniObtenido.getName() +
-			" DESC LIMIT 1");
+			PreparedStatement ps2 = conn.prepareStatement("SELECT " + dniObtenido.getName() 
+			+ " FROM " + tabla.nombre() 
+			+ " WHERE " + dniObtenido.getName() + "=( SELECT max(" + dniObtenido.getName() + ") FROM " + tabla.nombre() + ")");  
             ResultSet rs = ps2.executeQuery();
             
             while(rs.next()){
