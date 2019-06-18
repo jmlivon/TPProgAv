@@ -68,7 +68,7 @@ public class Consultas {
 		}	
 		
 		sb.replace(sb.length()-1, sb.length(),")");
-		System.out.println(sb.toString());
+		System.out.println("Query: " + sb.toString());
 		
 		PreparedStatement ps;
 		
@@ -172,6 +172,8 @@ public class Consultas {
 					" WHERE " + dniObtenido.getName() + " = " + UBean.goGet(o,dniObtenido.getName()));
 			ps.execute();
 			conn.close();
+			
+			System.out.println("Fin eliminar");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -6,11 +6,40 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import servicios.Consultas;
+import utilidades.UBean;
+
 public class Main {
 	
 	public static void main(String[] args) {
 		
+		/* Pruebo SET
+		Persona p = new Persona("Juan");
+		System.out.println("Nombre1: " + p.getNombre());
+		UBean.goSet(p, "nombre", "Pedro");
+		System.out.println("Nombre2: " + p.getNombre());
+		*/
 		
+		/* Guardar
+		Persona p = new Persona("Pablo");
+		try {
+			Consultas.Guardar(p);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		*/
+		
+		/* Modificar
+		Persona p = new Persona("Omar");	
+		p.setDni(38491334);
+		Consultas.Modificar(p);		
+		*/
+		
+		// Eliminar
+		Persona b = new Persona();
+		b.setDni(38491335);
+		Consultas.Eliminar(b);		
 	}
 
 	/*public static void main(String[] args) {
